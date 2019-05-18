@@ -8,24 +8,23 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto:700" rel="stylesheet">
 
 
-    <!--Load FireBase-->
-    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyDwmHW2GbuxcEOESdICcICULkmSbty25Mc",
-        authDomain: "project-restore-73cd4.firebaseapp.com",
-        databaseURL: "https://project-restore-73cd4.firebaseio.com",
-        projectId: "project-restore-73cd4",
-        storageBucket: "project-restore-73cd4.appspot.com",
-        messagingSenderId: "255065765593"
-      };
-      firebase.initializeApp(config);
-    </script>
+
+<<script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAaWni-ldhd6H4s7FjI7gvhSERXEsjkDbE",
+    authDomain: "projectrestore-e4e47.firebaseapp.com",
+    databaseURL: "https://projectrestore-e4e47.firebaseio.com",
+    projectId: "projectrestore-e4e47",
+    storageBucket: "projectrestore-e4e47.appspot.com",
+    messagingSenderId: "603191615680"
+  };
+  firebase.initializeApp(config);
+</script>
 
   </head>
   <body>
-
     <!--NavBar-->
     <div class = "navbar">
 
@@ -35,8 +34,6 @@
       </div>
 
       <div class = "navContainer">
-        <div class = "sign">Sign Up</div>
-        <div class = "sign">Login In</div>
       </div>
 
     </div>
@@ -44,24 +41,23 @@
     <!--Login-->
     <div class="loginContainer">
       <div class = "loginFieldImg"></div>
-
-      <div class = "loginField">
-        <div class="loginFieldTitle">Login</div>
-        <input type="text" name="Name" class = "inputLoginField" placeholder="UserName"></input>
-        <input type="text" name="Name" class = "inputLoginField" placeholder="Email"></input>
-        <input type="password" name="Name" class = "inputLoginField" placeholder="Password"></input>
-        <input type="password" name="Name" class = "inputLoginField" placeholder="Confirm Password"></input>
-        <button id = "login">Login</button>
-        <div class="loginFieldTitle" style="margin-top: 4%">Sign In</div>
-
-        <input type="text" name="Name" class = "inputSignInField" placeholder="Email"></input>
-        <input type="password" name="Name" class = "inputSignInField" placeholder="Password"></input>
-        <button id = "signIn">Sign In</button>
+      <div id="user_div" class="loggedin-div">
+        <h3>Welcome User</h3>
+        <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+        <button onclick="logout()">Logout</button>
+      </div>
+      <div id="login_div" class="main-div">
+        <h3>Firebase Web login Example</h3>
+        <input type="email" placeholder="Email..." id="email_field" />
+        <input type="password" placeholder="Password..." id="password_field" />
+      <button onclick="login()">login</button>
+      <button onclick="createUserWithEmailAndPassword()">Create User</button>
 
       </div>
     </div>
 
     <script src = "index.js"></script>
+
   </body>
 
 </html>
